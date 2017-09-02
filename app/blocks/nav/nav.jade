@@ -1,0 +1,6 @@
+mixin nav()
+	+b.nav&attributes(attributes)
+		+e('ul').list
+			each val in ['Конкурс', 'Тест', 'О продукте', 'Мастерклассы']
+				+e.item
+					+e.link(href='#') !{val}

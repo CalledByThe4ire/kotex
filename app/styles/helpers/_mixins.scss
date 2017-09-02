@@ -27,8 +27,8 @@
 	margin: 0 auto;
 
 	@include padding-x($offset--xs);
-	min-width: $container--min;
-	max-width: $container--max;
+	min-width: $container--xs;
+	max-width: $container--lg;
 
 	@media #{$sm} {
 		@include padding-x($offset--sm);
