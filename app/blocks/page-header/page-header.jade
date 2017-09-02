@@ -1,0 +1,12 @@
+include ../nav/nav
+include ../logo/logo
+include ../intro/intro
+
+mixin page-header()
+	+b('header').page-header&attributes(attributes)
+		+e.container-fluid
+			+nav(class='__nav')
+
+			+e.container
+				+logo(class='__logo')
+				+intro(class='__intro')

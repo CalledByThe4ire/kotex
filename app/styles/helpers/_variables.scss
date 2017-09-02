@@ -25,8 +25,8 @@ $font-family:              $font-family--sans-serif !default;
 
 // == Media queries breakpoints
 //
-$xs:                   "only screen and (max-width: 959px)";
-$sm:                   "only screen and (min-width: 960px) and (max-width: 1365px)";
+$xs:                   "only screen and (max-width: 979px)";
+$sm:                   "only screen and (min-width: 980px) and (max-width: 1365px)";
 $md:                  "only screen and (min-width: 1366px) and (max-width: 1919px)";
 $lg:                  "only screen and (min-width: 1920px)";
 
@@ -40,13 +40,14 @@ $tab-desk:                 "only screen and (min-width: 1366px)";
 
 // == Container sizes
 //
-$container--min:           480px !default;
-$container--mid:           960px !default;
-$container--max:           1366px !default;
+$container--xs:           490px !default;
+$container--sm:           980px !default;
+$container--md:           1366px !default;
+$container--lg:           1920px !default;
 
 // == Paddings and margins
 //
-$offset--xs:               16px !default;
+$offset--xs:               15px !default;
 $offset--sm:               32px !default;
 $offset--md:               109px !default;
 $offset--lg:               154px !default;

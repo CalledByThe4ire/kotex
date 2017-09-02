@@ -1,6 +1,10 @@
 extends ../blocks/layout-default/layout-default
 
+//- page-header
+include ../blocks/page-header/page-header
+
 block head
 	- var pageTitle = 'Kotex';
 
 block content
+	+page-header
