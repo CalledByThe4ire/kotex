@@ -1,3 +1,102 @@
 .photo-upload {
-	display: block;
+	min-height: 815px;
+
+	@include retina-background("photo-upload/bg__photo-upload--mobile", "jpg");
+	background-color: $color-secondary;
+	background-size: cover;
+
+	&__container {
+		position: relative;
+		z-index: 5;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		font-size: 2vw;
+
+		background-color: #ffffff;
+
+		@media #{$tab-desk} {
+			font-size: initial;
+		}
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			top: 100%;
+
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 30px;
+
+			background-image: url("../images/photo-upload/bg-triangle__photo-upload.svg");
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__heading,
+	&__item {
+		font-weight: 800;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__heading {
+		margin-top: 7rem;
+		margin-bottom: 3rem;
+
+		@include fluid-type(font-size, 490px, 960px, 44px, 88px);
+		line-height: 1;
+		color: $color-primary;
+	}
+
+	&__list {
+		@include list-clear();
+	}
+
+	&__item,
+	&__link {
+		@include fluid-type(font-size, 490px, 960px, 19px, 38px);
+	}
+
+	&__item {
+		padding-bottom: 2rem;
+
+		line-height: 1.7;
+	}
+
+	&__btn {
+		@include btn();
+		margin-bottom: 4.5rem;
+
+		border: none;
+	}
+
+	&__link {
+		font-weight: 600;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		&:link,
+		&:visited {
+			color: $text-color;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:active {
+			color: $color-primary;
+		}
+
+		&:hover,
+		&:active {
+			transition-duration: .3s;
+		}
+	}
 }

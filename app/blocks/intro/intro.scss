@@ -33,7 +33,7 @@
 	& span:first-of-type {
 		padding-top: #{strip-unit(percentage(70/490)) + vw};
 
-		@include fluid-type(font-size, 480px, 959px, 38px, 78px);
+		@include fluid-type(font-size, 490px, 960px, 38px, 78px);
 
 		@media #{$md} {
 			padding-top: 7.5rem;
@@ -51,7 +51,7 @@
 	& span:last-of-type {
 		padding-bottom: #{strip-unit(percentage(55/490)) + vw};
 
-		@include fluid-type(font-size, 480px, 959px, 60px, 120px);
+		@include fluid-type(font-size, 490px, 960px, 60px, 120px);
 
 		@media #{$md} {
 			padding-bottom: 0;

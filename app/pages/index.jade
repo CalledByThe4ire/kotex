@@ -2,6 +2,7 @@ extends ../blocks/layout-default/layout-default
 
 //- page-header
 include ../blocks/page-header/page-header
+include ../blocks/main-content/main-content
 include ../blocks/photo-upload/photo-upload
 
 block head
@@ -9,4 +10,5 @@ block head
 
 block content
 	+page-header
-	+photo-upload
+	+main-content
+		+photo-upload

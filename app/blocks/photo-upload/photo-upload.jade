@@ -1,12 +1,13 @@
 mixin photo-upload()
 	+b('section').photo-upload&attributes(attributes)
-		+e('header').heading
-			| хочешь попасть на съемки шоу танцы?
-		+e('ul').list
-			each val, index in ['Загружай фотографии своей активной жизни', 'Делись ими в социальных сетях', 'Каждую неделю Kotex выбирает Победительницу и дарит билеты на съемки шоу «ТАНЦЫ»!']
-				+e.item
-					| #{index + 1}. !{val}
-		+e('button')(type='file', value='upload')
-			| Загрузи фото
-		+e.link(href='#')
-			| Полные правила акции
+		+e.container
+			+e('header').heading
+				| хочешь попасть на&nbsp;съемки шоу танцы?
+			+e('ul').list
+				each val, index in ['Загружай фотографии своей активной жизни', 'Делись ими в&nbsp;социальных сетях', 'Каждую неделю Kotex выбирает Победительницу и&nbsp;дарит билеты на&nbsp;съемки шоу «ТАНЦЫ»!']
+					+e.item
+						| #{index + 1}. !{val}
+			+e('button').btn(type='file', value='upload')
+				| Загрузи фото
+			+e.link(href='#')
+				| Полные правила акции
