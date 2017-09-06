@@ -1,11 +1,7 @@
 .intro {
-	padding-top: 8.2rem;
+	padding-top: #{strip-unit(percentage(45/320)) + vw};
 
 	font-size: 2vw;
-
-	@media #{$sm} {
-		padding-top: 16.5rem;
-	}
 
 	@media #{$tab-desk} {
 		padding-top: 0;
@@ -13,13 +9,34 @@
 		font-size: initial;
 	}
 
+	&__container {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media #{$md} {
+			top: -2rem;
+		}
+
+		@media #{$lg} {
+			top: -3rem;
+		}
+	}
+
 	&__image {
 		&--dance {
-			@include padding-x(5rem);
+			@include padding-x( #{strip-unit(percentage(25/320)) + vw});
+			padding-bottom: 0.5rem;
 		}
 
 		&--kotex {
-			@include padding-x(7rem);
+			@include padding-x( #{strip-unit(percentage(45/320)) + vw});
+		}
+
+		@media #{$tab-desk} {
+			padding: 0;
 		}
 	}
 
@@ -31,38 +48,38 @@
 	}
 
 	& span:first-of-type {
-		padding-top: #{strip-unit(percentage(70/490)) + vw};
+		padding-top: #{strip-unit(percentage(45/320)) + vw};
 
-		@include fluid-type(font-size, 490px, 960px, 38px, 78px);
+		@include fluid-type(font-size, 320px, 768px, 25px, 60px);
 
 		@media #{$md} {
-			padding-top: 7.5rem;
+			padding-top: initial;
 
-			font-size: 5rem;
+			font-size: $font-size * 1.4; // 2.8rem
 		}
 
 		@media #{$lg} {
-			padding-top: 10rem;
+			padding-top: initial;
 
-			font-size: 7rem;
+			font-size: $font-size * 2.1; // 4.2rem
 		}
 	}
 
 	& span:last-of-type {
-		padding-bottom: #{strip-unit(percentage(55/490)) + vw};
+		padding-bottom: #{strip-unit(percentage(35/490)) + vw};
 
-		@include fluid-type(font-size, 490px, 960px, 60px, 120px);
+		@include fluid-type(font-size, 320px, 768px, 40px, 94px);
 
 		@media #{$md} {
 			padding-bottom: 0;
 
-			font-size: 7.8rem;
+			font-size: $font-size * 2.2; // 4.4rem
 		}
 
 		@media #{$lg} {
 			padding-bottom: 0;
 
-			font-size: 11rem;
+			font-size: $font-size * 3.25; // 6.5rem
 		}
 	}
 }

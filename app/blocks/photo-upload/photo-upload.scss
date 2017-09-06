@@ -1,5 +1,6 @@
 .photo-upload {
-	min-height: 815px;
+	padding-bottom: 25rem;
+	// min-height: 530px;
 
 	@include retina-background("photo-upload/bg__photo-upload--mobile", "jpg");
 	background-color: $color-secondary;
@@ -31,7 +32,7 @@
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-			height: 30px;
+			height: 20px;
 
 			background-image: url("../images/photo-upload/bg-triangle__photo-upload.svg");
 			background-repeat: no-repeat;
@@ -46,37 +47,44 @@
 	}
 
 	&__heading {
-		margin-top: 7rem;
-		margin-bottom: 3rem;
+		margin-top: 4.5rem;
+		margin-bottom: 2rem;
 
-		@include fluid-type(font-size, 490px, 960px, 44px, 88px);
+		@include fluid-type(font-size, 320px, 768px, 30px, 70px);
 		line-height: 1;
 		color: $color-primary;
 	}
 
 	&__list {
 		@include list-clear();
+		margin-bottom: 2.5rem;
 	}
 
 	&__item,
 	&__link {
-		@include fluid-type(font-size, 490px, 960px, 19px, 38px);
+		@include fluid-type(font-size, 320px, 768px, 12px, 30px);
 	}
 
 	&__item {
-		padding-bottom: 2rem;
+		padding-bottom: 1.5rem;
 
-		line-height: 1.7;
+		line-height: 1.5;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
 	}
 
 	&__btn {
 		@include btn();
-		margin-bottom: 4.5rem;
+		margin-bottom: 2rem;
 
 		border: none;
 	}
 
 	&__link {
+		margin-bottom: 1.5rem;
+
 		font-weight: 600;
 		line-height: 1.2;
 		text-transform: uppercase;

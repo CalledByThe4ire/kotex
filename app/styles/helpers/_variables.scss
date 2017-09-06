@@ -13,7 +13,7 @@ $bg-body:                  #ffffff !default;
 
 // == Typography
 //
-$font-size:                2.4rem !default;
+$font-size:                2rem !default;
 $line-height:              1;
 /* stylelint-disable */
 $font-family--sans-serif:  "Akrobat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,30 +25,30 @@ $font-family:              $font-family--sans-serif !default;
 
 // == Media queries breakpoints
 //
-$xs:                   "only screen and (max-width: 979px)";
-$sm:                   "only screen and (min-width: 980px) and (max-width: 1365px)";
-$md:                  "only screen and (min-width: 1366px) and (max-width: 1919px)";
-$lg:                  "only screen and (min-width: 1920px)";
+$xs:                       "only screen and (min-width: 320px) and (max-width: 575px)";
+$sm:                       "only screen and (min-width: 576px) and (max-width: 767px)";
+$md:                       "only screen and (min-width: 768px) and (max-width: 1149px)";
+$lg:                       "only screen and (min-width: 1150px)";
 
-$retina2x:                  "(min-resolution: 1.5dppx)";
+$retina2x:                 "(min-resolution: 1.5dppx)";
 
 // mobile + tablet
-$portable:                 "only screen and (max-width: 1365px)";
+$portable:                 "only screen and (max-width: 767px)";
 
 // tablet + desktop:  more than mobile
-$tab-desk:                 "only screen and (min-width: 1366px)";
+$tab-desk:                 "only screen and (min-width: 768px)";
 
 // == Container sizes
 //
-$container--xs:           490px !default;
-$container--sm:           980px !default;
-$container--md:           1366px !default;
-$container--lg:           1920px !default;
+$container--xs:           320px !default;
+$container--sm:           576px !default;
+$container--md:           768px !default;
+$container--lg:           1150px !default;
 
 // == Paddings and margins
 //
-$offset--xs:               15px !default;
-$offset--sm:               32px !default;
-$offset--md:               109px !default;
-$offset--lg:               154px !default;
+$offset--xs:               12px !default;
+$offset--sm:               20px !default;
+$offset--md:               61px !default;
+$offset--lg:               92px !default;
 

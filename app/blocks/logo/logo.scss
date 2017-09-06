@@ -1,22 +1,22 @@
 .logo {
-	width: 180px;
-	height: 144px;
+	width: 120px;
+	height: 96px;
 
 	background-color: #ffffff;
 
 	@media #{$sm} {
-		width: 365px;
-		height: 291px;
+		width: 215px;
+		height: 172px;
 	}
 
 	@media #{$md} {
-		width: 204px;
-		height: 163px;
+		width: 115px;
+		height: 93px;
 	}
 
 	@media #{$lg} {
-		width: 287px;
-		height: 230px;
+		width: 173px;
+		height: 139px;
 	}
 
 	&__link {
