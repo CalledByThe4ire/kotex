@@ -1,15 +1,13 @@
 .photo-upload {
-	padding-bottom: 25rem;
-	// min-height: 530px;
+	min-height: 530px;
 
-	@include retina-background("photo-upload/bg__photo-upload--mobile", "jpg");
 	background-color: $color-secondary;
-	background-size: cover;
 
 	&__container {
 		position: relative;
 		z-index: 5;
 
+		@include container();
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -22,13 +20,25 @@
 			font-size: initial;
 		}
 
+		&::before,
 		&::after {
 			content: "";
 
 			position: absolute;
 			left: 0;
 			top: 100%;
+		}
 
+		&::before {
+			width: 100%;
+			height: 100%;
+
+			@include retina-background("photo-upload/bg__photo-upload--mobile", "jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		&::after {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
@@ -48,9 +58,9 @@
 
 	&__heading {
 		margin-top: 4.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 
-		@include fluid-type(font-size, 320px, 768px, 30px, 70px);
+		@include fluid-type(font-size, 320px, 768px, 28px, 37px);
 		line-height: 1;
 		color: $color-primary;
 	}
