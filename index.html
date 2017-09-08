@@ -22,53 +22,76 @@
 	<body class="page">
 		<header class="page-header">
 			<div class="page-header__container-fluid">
-				<div class="nav page-header__nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a href="#" class="nav__link">Конкурс</a>
-						</li>
-						<li class="nav__item">
-							<a href="#" class="nav__link">Тест</a>
-						</li>
-						<li class="nav__item">
-							<a href="#" class="nav__link">О продукте</a>
-						</li>
-						<li class="nav__item">
-							<a href="#" class="nav__link">Мастерклассы</a>
-						</li>
-					</ul>
-				</div>
 				<div class="page-header__container">
+					<div class="nav page-header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Конкурс</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Тест</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">О продукте</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Мастерклассы</a>
+							</li>
+						</ul>
+					</div>
 					<div class="logo page-header__logo">
 						<a data-js="kotex-logo--link" href="index.html" class="logo__link">Kotex</a>
 					</div>
 					<div class="intro page-header__intro">
-						<span>Участницы шоу</span>
-						<a data-js="dance-logo--link" href="javascript:void(0)" onclick="return false" class="intro__link">
-							<picture>
-								<source media="(min-width: 1366px)" srcset="./assets/images/page-header/logo-dance__page-header--md.png 1x, ./assets/images/page-header/logo-dance__page-header--md@2x.png 2x,"
-								/>
-								<source media="(min-width: 1920px)" srcset="./assets/images/page-header/logo-dance__page-header--lg.png 1x, ./assets/images/page-header/logo-dance__page-header--lg@2x.png 2x,"
-								/>
-								<img src="./assets/images/page-header/logo-dance__page-header--mobile.png" srcset="./assets/images/page-header/logo-dance__page-header--mobile@2x.png 2x"
-								 alt="Dance" title="Dance" class="intro__image intro__image--dance" />
-							</picture>
-						</a>
-						<span>выбирают</span>
-						<a data-js="kotex-product--link" href="javascript:void(0)" onclick="return false" class="intro__link">
-							<picture>
-								<source media="(min-width: 1366px)" srcset="./assets/images/page-header/kotex-product__page-header--md.png 1x, ./assets/images/page-header/kotex-product__page-header--md@2x.png 2x,"
-								/>
-								<source media="(min-width: 1920px)" srcset="./assets/images/page-header/kotex-product__page-header--lg.png 1x, ./assets/images/page-header/kotex-product__page-header--lg@2x.png 2x,"
-								/>
-								<img src="./assets/images/page-header/kotex-product__page-header--mobile.png" srcset="./assets/images/page-header/kotex-product__page-header--mobile@2x.png 2x"
-								 alt="Kotex" title="Kotex" class="intro__image intro__image--kotex" />
-							</picture>
-						</a>
+						<div class="intro__container">
+							<span>Участницы шоу</span>
+							<a data-js="dance-logo--link" href="javascript:void(0)" onclick="return false" class="intro__link">
+								<picture>
+									<source media="(min-width: 768px) and (max-width: 1149px)" srcset="./assets/images/page-header/logo-dance__page-header--md.png 1x, ./assets/images/page-header/logo-dance__page-header--md@2x.png 2x"
+									/>
+									<source media="(min-width: 1150px)" srcset="./assets/images/page-header/logo-dance__page-header--lg.png 1x, ./assets/images/page-header/logo-dance__page-header--lg@2x.png 2x"
+									/>
+									<img src="./assets/images/page-header/logo-dance__page-header--mobile.png" srcset="./assets/images/page-header/logo-dance__page-header--mobile@2x.png 2x"
+									 alt="Dance" title="Dance" class="intro__image intro__image--dance" />
+								</picture>
+							</a>
+							<span>выбирают</span>
+							<a data-js="kotex-product--link" href="javascript:void(0)" onclick="return false" class="intro__link">
+								<picture>
+									<source media="(min-width: 768px) and (max-width: 1149px)" srcset="./assets/images/page-header/kotex-product__page-header--md.png 1x, ./assets/images/page-header/kotex-product__page-header--md@2x.png 2x"
+									/>
+									<source media="(min-width: 1150px)" srcset="./assets/images/page-header/kotex-product__page-header--lg.png 1x, ./assets/images/page-header/kotex-product__page-header--lg@2x.png 2x"
+									/>
+									<img src="./assets/images/page-header/kotex-product__page-header--mobile.png" srcset="./assets/images/page-header/kotex-product__page-header--mobile@2x.png 2x"
+									 alt="Kotex" title="Kotex" class="intro__image intro__image--kotex" />
+								</picture>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</header>
+		<main class="main-content" role="main">
+			<section class="photo-upload">
+				<div class="photo-upload__container-fluid">
+					<div class="photo-upload__container">
+						<header class="photo-upload__heading">хочешь попасть на&nbsp;съемки шоу танцы?</header>
+						<div class="photo-upload__container-inner">
+							<ul class="photo-upload__list">
+								<li class="photo-upload__item">
+									<span>1.</span> Загружай фотографии своей активной жизни</li>
+								<li class="photo-upload__item">
+									<span>2.</span> Делись ими в&nbsp;социальных сетях</li>
+								<li class="photo-upload__item">
+									<span>3.</span> Каждую неделю Kotex выбирает Победительницу и&nbsp;дарит билеты на&nbsp;съемки шоу «ТАНЦЫ»!</li>
+							</ul>
+							<button type="file" value="upload" class="photo-upload__btn">Загрузи фото</button>
+							<a href="#" class="photo-upload__link">Полные правила акции</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 		<script src="assets/scripts/app.min.js"></script>
 	</body>
 
