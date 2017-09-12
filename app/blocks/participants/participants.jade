@@ -1,0 +1,7 @@
+include ../slider/slider
+
+mixin participants()
+	+b('section').participants&attributes(attributes)
+		+e.container-fluid
+			+e.container
+				+slider(getData('participants-list'))(class='--parent __slider')

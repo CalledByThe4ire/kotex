@@ -1,0 +1,9 @@
+include ../slide/slide
+
+mixin slider(tree)
+	+b('ul').slider&attributes(attributes)
+		each item in tree
+			+slide(item)(class='__slide')
+				if item.content
+					+slider(item.content)(class='--child')
+

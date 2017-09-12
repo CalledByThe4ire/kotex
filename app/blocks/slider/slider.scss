@@ -1,0 +1,14 @@
+.slider {
+	@include list-clear();
+	display: flex;
+
+	&--parent {
+		flex-direction: column;
+		padding-top: 2rem;
+	}
+
+	&--child {
+		flex-basis: 100%;
+		flex-wrap: wrap;
+	}
+}

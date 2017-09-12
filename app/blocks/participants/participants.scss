@@ -1,0 +1,22 @@
+.participants {
+	&__container {
+		@include container();
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__container-fluid {
+		@include container-fluid();
+		display: flex;
+		flex-direction: column;
+		min-height: 1214px;
+
+		@include retina-background("participants/bg__participants--mobile", "jpg");
+		background-size: cover;
+		background-color: #b6bddd;
+	}
+
+	&__slider {
+		@include list-clear();
+	}
+}
