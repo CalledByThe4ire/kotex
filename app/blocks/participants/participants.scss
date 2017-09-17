@@ -9,7 +9,6 @@
 		@include container-fluid();
 		display: flex;
 		flex-direction: column;
-		min-height: 1214px;
 
 		@include retina-background("participants/bg__participants--mobile", "jpg");
 		background-size: cover;

@@ -7,7 +7,7 @@
 		@include container-fluid();
 		margin-bottom: 25rem;
 
-		@media #{$md} {
+		@media #{$tab-desk} {
 			margin-bottom: 0;
 		}
 
@@ -33,7 +33,7 @@
 			background-position: center center;
 
 			@media #{$tab-desk} {
-				height: auto;
+				min-height: auto;
 
 				right: 0;
 				bottom: 0;

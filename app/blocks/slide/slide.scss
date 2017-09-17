@@ -1,8 +1,6 @@
 .slide {
 	$root: &;
-
 	display: flex;
-	flex-direction: column;
 
 	&__heading {
 		font-style: normal;
@@ -24,11 +22,13 @@
 
 	&__figure {
 		position: relative;
+
 		margin: 0;
 		padding: 0;
 
 		&::before {
 			content: "";
+
 			position: absolute;
 
 			font-weight: 800;
@@ -41,6 +41,7 @@
 
 		&::after {
 			content: "#двигайсявперед";
+
 			position: absolute;
 
 			display: flex;
@@ -53,6 +54,9 @@
 	}
 
 	&__figcaption {
+		display: flex;
+		align-items: center;
+
 		font-style: normal;
 		font-weight: 700;
 		line-height: 1;
@@ -76,16 +80,52 @@
 	}
 
 	&--parent {
+		flex-direction: column;
+
 		@include margin-x(3rem);
+
+		@media #{$tab-desk} {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			@include margin-x(1.6rem);
+		}
 
 		#{$root}__heading {
 			padding-bottom: 2rem;
 
-			@include fluid-type(font-size, 320px, 768px, 22px, 52px);
+			@include fluid-type(font-size, 320px, 767px, 22px, 52px);
+
+			@media #{$tab-desk} {
+				flex-basis: 100%;
+			}
+
+			@media #{$md} {
+				font-size: 2.7rem;
+			}
+
+			@media #{$lg} {
+				font-size: 4rem;
+			}
 		}
 
 		> #{$root}__link {
+			width: 100%;
 			margin-bottom: 3rem;
+
+			@media #{$tab-desk} {
+				margin-bottom: 0;
+			}
+
+			@media #{$md} {
+				width: calc(#{percentage(2/5)} - 1.6rem);
+				margin-right: 1.6rem;
+			}
+
+			@media #{$lg} {
+				width: calc(#{percentage(2/5)} - 2.4rem);
+				margin-right: 2.4rem;
+			}
 		}
 
 		#{$root}__figure {
@@ -104,7 +144,16 @@
 
 				@include padding-x(0.5rem);
 				@include padding-y(1rem);
-				@include fluid-type(font-size, 320px, 768px, 13px, 38px);
+
+				@include fluid-type(font-size, 320px, 767px, 13px, 38px);
+
+				@media #{$md} {
+					font-size: 1.6rem;
+				}
+
+				@media #{$lg} {
+					font-size: 2.2rem;
+				}
 			}
 		}
 
@@ -113,15 +162,34 @@
 			padding-left: 1.5rem;
 
 			@include padding-y(1.5rem);
-			@include fluid-type(font-size, 320px, 768px, 15px, 42px);
+
+			@include fluid-type(font-size, 320px, 767px, 15px, 42px);
+
+			@media #{$md} {
+				font-size: 1.8rem;
+			}
+
+			@media #{$lg} {
+				font-size: 2.1rem;
+			}
 		}
 
 		#{$root}__slogan {
 			left: calc(10px + 5px);
 			bottom: calc(35px + 8%);
 
-			@include fluid-type(font-size, 320px, 768px, 17px, 48px);
+			@include fluid-type(font-size, 320px, 767px, 17px, 48px);
 			text-shadow: 0 0 0.75rem rgba(#000000, 0.75);
+
+			@media #{$md} {
+				bottom: 60px;
+				font-size: 2.1rem;
+			}
+
+			@media #{$lg} {
+				bottom: 70px;
+				font-size: 2.8rem;
+			}
 		}
 
 		#{$root}__image {
@@ -130,11 +198,15 @@
 	}
 
 	&--child {
-		lost-column: 1/3 auto 1rem flex;
-		margin-bottom: 1rem;
+		flex-direction: column;
+		lost-waffle: 1/3 auto 1rem flex;
 
-		&:nth-last-child(-n + 3) {
-			margin-bottom: 0;
+		@media #{$md} {
+			lost-waffle: 1/3 auto 1.6rem flex;
+		}
+
+		@media #{$lg} {
+			lost-waffle: 1/3 auto 2.4rem flex;
 		}
 
 		#{$root}__figure {
@@ -156,6 +228,14 @@
 
 				// 13/3 = 4.333333333333333, 38/3 = 12.666666666666667
 				@include fluid-type(font-size, 320px, 768px, 4.333333333333333px, 12.666666666666667px);
+
+				@media #{$md} {
+					font-size: calc(1.6rem / 3);
+				}
+
+				@media #{$lg} {
+					font-size: calc(2.2rem / 3);
+				}
 			}
 		}
 
@@ -166,7 +246,15 @@
 			@include padding-y(calc(1.5rem / 3));
 
 			// 15/3 = 5, 42/3 = 14
-			@include fluid-type(font-size, 320px, 768px, 5px, 14px);
+			@include fluid-type(font-size, 320px, 767px, 5px, 14px);
+
+			@media #{$md} {
+				font-size: calc(1.8rem / 3);
+			}
+
+			@media #{$lg} {
+				font-size: calc(2.1rem / 3);
+			}
 		}
 
 		#{$root}__slogan {
@@ -174,10 +262,20 @@
 			bottom: calc(35px / 3 + 8%);
 
 			// 17/3 =5.666666666666667, 48/3 = 16
-			@include fluid-type(font-size, 320px, 768px, 5.666666666666667px, 16px);
+			@include fluid-type(font-size, 320px, 767px, 5.666666666666667px, 16px);
 
 			// 0.75/3 = 0.25
 			text-shadow: 0 0 0.25rem rgba(#000000, 0.25);
+
+			@media #{$md} {
+				bottom: calc(60px / 3);
+				font-size: calc(2.1rem / 3);
+			}
+
+			@media #{$lg} {
+				bottom: calc(70px / 3);
+				font-size: calc(2.8rem / 3);
+			}
 		}
 
 		#{$root}__image {

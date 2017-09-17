@@ -1,6 +1,10 @@
 .slider {
 	@include list-clear();
-	display: flex;
+
+	&--parent,
+	&--child {
+		display: flex;
+	}
 
 	&--parent {
 		flex-direction: column;
@@ -8,7 +12,10 @@
 	}
 
 	&--child {
-		flex-basis: 100%;
 		flex-wrap: wrap;
+
+		@media #{$tab-desk} {
+			width: percentage(3/5);
+		}
 	}
 }
