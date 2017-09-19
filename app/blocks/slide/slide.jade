@@ -4,13 +4,13 @@ mixin slide(item)
 			+e('header').heading
 				| #{item.heading}
 		+e('a').link(href='javascript:void(0)', onclick='return false')
-			+e('figure').figure
+			+e('div').content
 				+e('span').slogan
 					| !{item.slogan}
 				picture
 					source( media='(min-width: 768px)', srcset=item.imgTabDesk + " 1x, " + item.imgTabDesk2x +" 2x" )
 					+e('img').image(src=item.imgMobile, srcset=item.imgMobile2x + " 2x, ", alt=item.imgAlt, title=item.imgAlt)
-			+e('figcaption').figcaption
+			+e('div').caption
 				span !{item.name}
 		block
 
