@@ -2,7 +2,7 @@ mixin slide(item)
 	+b.slide(class='#{item.isParent ? "--parent" : "--child"}')&attributes(attributes)
 		if item.isParent
 			+e('header').heading
-				| #{item.heading}
+				h2 #{item.heading}
 		+e('a').link(href='javascript:void(0)', onclick='return false')
 			+e('div').content
 				+e('span').slogan

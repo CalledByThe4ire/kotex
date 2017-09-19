@@ -3,13 +3,22 @@
 	display: flex;
 
 	&__heading {
-		font-style: normal;
-		font-weight: 800;
-		line-height: 1;
-		color: $color-secondary;
-		text-align: center;
-		text-transform: uppercase;
-		white-space: nowrap;
+		& > h2 {
+			margin: 0;
+			padding: 0;
+
+			font-style: normal;
+			font-weight: 800;
+			line-height: 1;
+			color: $color-secondary;
+			text-align: center;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+
+		@media #{$tab-desk} {
+			flex-basis: 100%;
+		}
 	}
 
 	&__link {
@@ -92,20 +101,18 @@
 		}
 
 		#{$root}__heading {
-			padding-bottom: 2rem;
+			& > h2 {
+				padding-bottom: 2rem;
 
-			@include fluid-type(font-size, 320px, 767px, 22px, 52px);
+				@include fluid-type(font-size, 320px, 767px, 22px, 52px);
 
-			@media #{$tab-desk} {
-				flex-basis: 100%;
-			}
+				@media #{$md} {
+					font-size: 2.7rem;
+				}
 
-			@media #{$md} {
-				font-size: 2.7rem;
-			}
-
-			@media #{$lg} {
-				font-size: 4rem;
+				@media #{$lg} {
+					font-size: 4rem;
+				}
 			}
 		}
 

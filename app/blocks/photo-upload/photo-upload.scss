@@ -142,7 +142,7 @@
 		}
 	}
 
-	&__heading,
+	&__heading > h2,
 	&__item {
 		font-weight: 800;
 		text-transform: uppercase;
@@ -150,18 +150,22 @@
 	}
 
 	&__heading {
-		margin-bottom: 2.5rem;
+		& > h2 {
+			margin: 0;
+			margin-bottom: 2.5rem;
+			padding: 0;
 
-		@include fluid-type(font-size, 320px, 768px, 28px, 37px);
-		line-height: 1;
-		color: $color-primary;
+			@include fluid-type(font-size, 320px, 768px, 28px, 37px);
+			line-height: 1;
+			color: $color-primary;
 
-		@media #{$tab-desk} {
-			white-space: nowrap;
-		}
+			@media #{$tab-desk} {
+				white-space: nowrap;
+			}
 
-		@media #{$lg} {
-			font-size: $font-size * 2.75; // 5.5rem
+			@media #{$lg} {
+				font-size: $font-size * 2.75; // 5.5rem
+			}
 		}
 	}
 
