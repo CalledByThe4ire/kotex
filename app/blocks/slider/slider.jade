@@ -1,7 +1,7 @@
 include ../slide/slide
 
 mixin slider(tree)
-	+b('ul').slider&attributes(attributes)
+	+b('ul').slider(data-js='slider')&attributes(attributes)
 		each item in tree
 			+slide(item)(class='__slide')
 				if item.content
