@@ -2,14 +2,10 @@
 	&__container {
 		@include container();
 		padding-top: 2rem;
-		display: flex;
-		flex-direction: column;
 	}
 
 	&__container-fluid {
 		@include container-fluid();
-		display: flex;
-		flex-direction: column;
 
 		@include retina-background("participants/bg__participants--mobile", "jpg");
 		background-size: cover;

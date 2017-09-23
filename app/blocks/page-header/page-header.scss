@@ -18,9 +18,6 @@
 	&__container-fluid {
 		position: relative;
 
-		display: flex;
-		flex-direction: column;
-
 		@include container-fluid();
 		min-height: calc(405px + #{percentage(50/320)});
 
@@ -90,8 +87,6 @@
 	}
 
 	&__container {
-		display: flex;
-		flex-direction: column;
 
 		@include padding-x($offset--xs);
 
