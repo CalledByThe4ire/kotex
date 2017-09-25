@@ -13,7 +13,7 @@ export default window.addEventListener(`DOMContentLoaded`, () => {
   // Flickity' instances
   const parentFlickity = {
     cellSelector: `.slide--parent.slider__slide`,
-    prevNextButtons: false,
+    prevNextButtons: true,
     pageDots: false,
     wrapAround: true
   };

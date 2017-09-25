@@ -104,15 +104,20 @@
 
 		#{$root}__heading {
 			& > h2 {
+				@include margin-x(2rem);
 				padding-bottom: 2rem;
 
-				@include fluid-type(font-size, 320px, 767px, 22px, 52px);
+				@include fluid-type(font-size, 320px, 767px, 20px, 50px);
 
 				@media #{$md} {
+					padding-bottom: 2.5rem;
+
 					font-size: 2.7rem;
 				}
 
 				@media #{$lg} {
+					padding-bottom: 3.5rem;
+
 					font-size: 4rem;
 				}
 			}

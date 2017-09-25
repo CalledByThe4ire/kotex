@@ -1,7 +1,6 @@
 .participants {
 	&__container {
 		@include container();
-		padding-top: 2rem;
 	}
 
 	&__container-fluid {

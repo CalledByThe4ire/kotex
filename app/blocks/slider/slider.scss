@@ -1,3 +1,68 @@
+.flickity {
+	&-prev-next-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+
+		&.previous,
+		&.next {
+			position: absolute;
+			top: 2rem;
+
+			padding: 0;
+
+			@media #{$md} {
+				top: 3.5rem;
+			}
+
+			@media #{$lg} {
+				top: 5rem;
+			}
+
+			& svg {
+				@include fluid-type(width, 320px, 767px, 20px, 50px);
+				@include fluid-type(height, 320px, 767px, 20px, 50px);
+
+				fill: $color-primary;
+
+				@media #{$md} {
+					width: 25px;
+					height: 25px;
+				}
+
+				@media #{$lg} {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
+		&.previous {
+			left: 0;
+
+			@media #{$md} {
+				left: calc(50% - 185px);
+			}
+
+			@media #{$lg} {
+				left: calc(50% - 285px);
+			}
+		}
+
+		&.next {
+			right: 0;
+
+			@media #{$md} {
+				right: calc(50% - 185px);
+			}
+
+			@media #{$lg} {
+				right: calc(50% - 285px);
+			}
+		}
+	}
+}
+
 .slider {
 	@include list-clear();
 
@@ -14,8 +79,19 @@
 	}
 
 	&--parent {
+		position: relative;
+
 		flex-direction: column;
 		max-width: 100%;
+		padding-top: 2rem;
+
+		@media #{$md} {
+			padding-top: 3.5rem;
+		}
+
+		@media #{$lg} {
+			padding-top: 5rem;
+		}
 	}
 
 	&--child {
@@ -26,3 +102,4 @@
 		}
 	}
 }
+
