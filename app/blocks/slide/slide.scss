@@ -1,6 +1,5 @@
 .slide {
 	$root: &;
-	display: flex;
 	width: 100%;
 	max-width: 100%;
 
@@ -19,11 +18,13 @@
 		}
 
 		@media #{$tab-desk} {
-			flex-basis: 100%;
+			width: 100%;
 		}
 	}
 
 	&__link {
+		display: block;
+
 		font-style: normal;
 		line-height: 1;
 		color: #ffffff;
@@ -55,8 +56,7 @@
 
 			position: absolute;
 
-			display: flex;
-			justify-content: center;
+			display: block;
 
 			font-weight: 700;
 
@@ -65,8 +65,7 @@
 	}
 
 	&__caption {
-		display: flex;
-		align-items: center;
+		display: block;
 
 		font-style: normal;
 		font-weight: 700;
@@ -91,14 +90,9 @@
 	}
 
 	&--parent {
-		flex-direction: column;
-
 		@include margin-x(3rem);
 
 		@media #{$tab-desk} {
-			flex-direction: row;
-			flex-wrap: wrap;
-
 			@include margin-x(1.6rem);
 		}
 
@@ -124,7 +118,6 @@
 		}
 
 		> #{$root}__link {
-			width: 100%;
 			margin-bottom: 3rem;
 
 			@media #{$tab-desk} {
@@ -143,8 +136,6 @@
 		}
 
 		#{$root}__content {
-			margin: auto;
-
 			&::before {
 				top: calc(10px + 5px);
 				left: calc(10px + 5px);
@@ -172,7 +163,6 @@
 		}
 
 		#{$root}__caption {
-			margin: auto;
 			padding-left: 1.5rem;
 
 			@include padding-y(1.5rem);
@@ -212,20 +202,17 @@
 	}
 
 	&--child {
-		flex-direction: column;
-		lost-waffle: 1/3 auto 1rem flex;
+		lost-waffle: 1/3 auto 1rem;
 
 		@media #{$md} {
-			lost-waffle: 1/3 auto 1.6rem flex;
+			lost-waffle: 1/3 auto 1.6rem;
 		}
 
 		@media #{$lg} {
-			lost-waffle: 1/3 auto 2.4rem flex;
+			lost-waffle: 1/3 auto 2.4rem;
 		}
 
 		#{$root}__content {
-			margin: auto;
-
 			&::before {
 				top: calc((10px + 5px) / 3);
 				left: calc((10px + 5px) / 3);
@@ -254,7 +241,6 @@
 		}
 
 		#{$root}__caption {
-			margin: auto;
 			padding-left: calc(1.5rem / 3);
 
 			@include padding-y(calc(1.5rem / 3));

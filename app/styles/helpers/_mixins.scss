@@ -54,6 +54,14 @@
 	list-style: none;
 }
 
+@mixin clearfix() {
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
 @mixin retina-background($image, $ext: "png") {
 	background-image: url("../images/" + $image + "." + $ext);
 

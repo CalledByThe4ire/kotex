@@ -1,6 +1,7 @@
 .participants {
 	&__container {
 		@include container();
+		@include clearfix();
 	}
 
 	&__container-fluid {
