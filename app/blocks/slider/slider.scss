@@ -7,22 +7,12 @@
 		&.previous,
 		&.next {
 			position: absolute;
-			top: 2rem;
-
 			padding: 0;
-
-			@media #{$md} {
-				top: 3.5rem;
-			}
-
-			@media #{$lg} {
-				top: 5rem;
-			}
 
 			& svg {
 				@include fluid-type(width, 320px, 767px, 20px, 50px);
-				@include fluid-type(height, 320px, 767px, 20px, 50px);
 
+				@include fluid-type(height, 320px, 767px, 20px, 50px);
 				fill: $color-primary;
 
 				@media #{$md} {
@@ -36,37 +26,11 @@
 				}
 			}
 		}
-
-		&.previous {
-			left: 0;
-
-			@media #{$md} {
-				left: calc(50% - 185px);
-			}
-
-			@media #{$lg} {
-				left: calc(50% - 285px);
-			}
-		}
-
-		&.next {
-			right: 0;
-
-			@media #{$md} {
-				right: calc(50% - 185px);
-			}
-
-			@media #{$lg} {
-				right: calc(50% - 285px);
-			}
-		}
 	}
 }
 
 .slider {
 	@include list-clear();
-
-	overflow: hidden;
 
 	& * {
 		min-width: 0;
@@ -84,16 +48,99 @@
 		@media #{$lg} {
 			padding-top: 5rem;
 		}
+
+		& > .flickity {
+			&-prev-next-button {
+				&.previous,
+				&.next {
+					top: 2rem;
+
+					@media #{$md} {
+						top: 3.5rem;
+					}
+
+					@media #{$lg} {
+						top: 5rem;
+					}
+				}
+
+				&.previous {
+					left: -$offset--xs;
+
+					@media #{$sm} {
+						left: -$offset--sm;
+					}
+
+					@media #{$md} {
+						left: calc(50% - 185px);
+					}
+
+					@media #{$lg} {
+						left: calc(50% - 285px);
+					}
+				}
+
+				&.next {
+					right: -$offset--xs;
+
+					@media #{$sm} {
+						right: -$offset--sm;
+					}
+
+					@media #{$md} {
+						right: calc(50% - 185px);
+					}
+
+					@media #{$lg} {
+						right: calc(50% - 285px);
+					}
+				}
+			}
+		}
 	}
 
 	&--child {
+		position: relative;
+
+		@include padding-x(3rem);
+
 		@media #{$tab-desk} {
 			position: absolute;
 			right: 0;
 			bottom: 0;
-
 			float: right;
 			width: percentage(3/5);
+		}
+
+		& .flickity {
+			&-viewport {
+				overflow: hidden;
+			}
+
+			&-prev-next-button {
+				&.previous,
+				&.next {
+					top: 50%;
+
+					transform: translateY(-50%);
+				}
+
+				&.previous {
+					left: -$offset--xs;
+
+					@media #{$sm} {
+						left: -$offset--sm;
+					}
+				}
+
+				&.next {
+					right: -$offset--xs;
+
+					@media #{$sm} {
+						right: -$offset--sm;
+					}
+				}
+			}
 		}
 	}
 }

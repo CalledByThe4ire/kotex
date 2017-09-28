@@ -4,32 +4,54 @@ import Flickity from 'flickity';
 
 export default window.addEventListener(`DOMContentLoaded`, () => {
   // media queries
-  // const mqlMobile = window.matchMedia(`only screen and (max-width: 767px)`);
-  // const mqlDesktop = window.matchMedia(`only screen and (min-width: 768px)`);
+  const mqlMobile = window.matchMedia(`only screen and (max-width: 767px)`);
+  const mqlDesktop = window.matchMedia(`only screen and (min-width: 768px)`);
 
-  // carousel
-  const slidersCollection = utils.$$(`[data-js='slider']`);
+  // sliders
+  const parentSlider = document.querySelector(`[data-js='slider'].slider--parent`);
+  const childSlidersCollection = utils.$$(`[data-js='slider'].slider--child`);
 
   // Flickity' instances
-  const parentFlickity = {
-    cellSelector: `.slide--parent.slider__slide`,
+  const parentFlkty = {
+    cellSelector: `.slide--parent`,
     prevNextButtons: true,
     pageDots: false,
     wrapAround: true
   };
 
-  // const childFlickity = {
-  //   cellSelector: `.slider__slide`,
-  //   prevNextButtons: false,
-  //   wrapAround: true
-  // };
+  const childFlkty = {
+    cellSelector: `.slide--child`,
+    prevNextButtons: true,
+    pageDots: false,
+    groupCells: 3,
+    wrapAround: true
+  };
 
-  slidersCollection.forEach(slider => {
-    if (slider.classList.contains(`slider--parent`)) {
-      /*eslint-disable */
-      new Flickity(`.slider--parent`, parentFlickity);
-      /*eslint-enable */
-    }
+  let flkty = [];
+
+  /*eslint-disable */
+  new Flickity(parentSlider, parentFlkty);
+  /*eslint-enable */
+
+  /**
+  * Enable / disable inner slider for different viewports
+  */
+  const matchMedia = () => {
+    childSlidersCollection.forEach((slider, index) => {
+      if (mqlMobile.matches) {
+        flkty[index] = new Flickity(slider, childFlkty);
+      }
+      if (mqlDesktop.matches) {
+        if (flkty[index]) {
+          flkty[index].destroy();
+        }
+      }
+    });
+  };
+
+  matchMedia();
+
+  window.addEventListener(`resize`, () => {
+    matchMedia();
   });
 });
-

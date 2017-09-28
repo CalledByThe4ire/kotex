@@ -6,7 +6,6 @@
 
 	&__container-fluid {
 		@include container-fluid();
-
 		@include retina-background("participants/bg__participants--mobile", "jpg");
 		background-size: cover;
 		background-color: #b6bddd;
