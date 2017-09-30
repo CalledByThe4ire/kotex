@@ -50,6 +50,12 @@
 		}
 
 		& > .flickity {
+			&-viewport {
+				@media #{$tab-desk} {
+					overflow: hidden;
+				}
+			}
+
 			&-prev-next-button {
 				&.previous,
 				&.next {
@@ -110,6 +116,39 @@
 			bottom: 0;
 			float: right;
 			width: percentage(3/5);
+
+			@include padding-x(0);
+		}
+
+		& .flickity {
+			&-viewport {
+				overflow: hidden;
+			}
+
+			&-prev-next-button {
+				&.previous,
+				&.next {
+					top: 50%;
+
+					transform: translateY(-50%);
+				}
+
+				&.previous {
+					left: -$offset--xs;
+
+					@media #{$sm} {
+						left: -$offset--sm;
+					}
+				}
+
+				&.next {
+					right: -$offset--xs;
+
+					@media #{$sm} {
+						right: -$offset--sm;
+					}
+				}
+			}
 		}
 
 		& .flickity {
