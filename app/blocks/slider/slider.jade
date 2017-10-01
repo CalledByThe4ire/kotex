@@ -1,9 +1,12 @@
 include ../slide/slide
 
 mixin slider(tree)
-	+b('ul').slider(data-js='slider')&attributes(attributes)
+	+b(data-js='slider--parent')&attributes(attributes)
 		each item in tree
-			+slide(item)(class='__slide')
+			+slide(item)
 				if item.content
-					+slider(item.content)(class='--child')
+					+b(data-js='slider--child').slider--child
+						each element in item.content
+							if element.group
+								+slider(element.group)(data-js=null, class='slider__wrapper')
 

@@ -90,6 +90,7 @@
 	}
 
 	&--parent {
+		@include clearfix();
 		@include margin-x(3rem);
 
 		@media #{$tab-desk} {
@@ -203,6 +204,7 @@
 	}
 
 	&--child {
+		position: relative;
 		lost-column: 1/3 auto 1rem;
 
 		@media #{$md} {

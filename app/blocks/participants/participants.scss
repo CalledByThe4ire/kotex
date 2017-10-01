@@ -10,8 +10,4 @@
 		background-size: cover;
 		background-color: #b6bddd;
 	}
-
-	&__slider {
-		@include list-clear();
-	}
 }
