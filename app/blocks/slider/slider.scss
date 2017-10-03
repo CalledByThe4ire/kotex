@@ -1,44 +1,7 @@
-.flickity {
-	&-prev-next-button {
-		background: none;
-		border: none;
-		cursor: pointer;
-
-		&.previous,
-		&.next {
-			position: absolute;
-			padding: 0;
-
-			& svg {
-				@include fluid-type(width, 320px, 767px, 20px, 50px);
-
-				@include fluid-type(height, 320px, 767px, 20px, 50px);
-				fill: $color-primary;
-
-				@media #{$md} {
-					width: 25px;
-					height: 25px;
-				}
-
-				@media #{$lg} {
-					width: 40px;
-					height: 40px;
-				}
-			}
-		}
-	}
-}
-
 .slider {
-	& * {
-		min-width: 0;
-		min-height: 0;
-	}
-
 	&--parent {
 		position: relative;
 
-		@include clearfix();
 		padding-top: 2rem;
 
 		@media #{$md} {
@@ -48,143 +11,19 @@
 		@media #{$lg} {
 			padding-top: 5rem;
 		}
-
-		& > .flickity {
-			&-viewport {
-				@media #{$tab-desk} {
-					overflow: hidden;
-				}
-			}
-
-			&-prev-next-button {
-				&.previous,
-				&.next {
-					top: 2rem;
-
-					@media #{$md} {
-						top: 3.5rem;
-					}
-
-					@media #{$lg} {
-						top: 5rem;
-					}
-				}
-
-				&.previous {
-					left: -$offset--xs;
-
-					@media #{$sm} {
-						left: -$offset--sm;
-					}
-
-					@media #{$md} {
-						left: calc(50% - 185px);
-					}
-
-					@media #{$lg} {
-						left: calc(50% - 285px);
-					}
-				}
-
-				&.next {
-					right: -$offset--xs;
-
-					@media #{$sm} {
-						right: -$offset--sm;
-					}
-
-					@media #{$md} {
-						right: calc(50% - 185px);
-					}
-
-					@media #{$lg} {
-						right: calc(50% - 285px);
-					}
-				}
-			}
-		}
 	}
 
 	&--child {
-		@include clearfix();
 		@include padding-x(3rem);
 
 		@media #{$tab-desk} {
-			float: right;
-
 			@include padding-x(0);
-		}
-
-		& .flickity {
-			&-viewport {
-				overflow: hidden;
-			}
-
-			&-prev-next-button {
-				&.previous,
-				&.next {
-					top: 50%;
-
-					transform: translateY(-50%);
-				}
-
-				&.previous {
-					left: -$offset--xs;
-
-					@media #{$sm} {
-						left: -$offset--sm;
-					}
-				}
-
-				&.next {
-					right: -$offset--xs;
-
-					@media #{$sm} {
-						right: -$offset--sm;
-					}
-				}
-			}
-		}
-
-		& .flickity {
-			&-viewport {
-				overflow: hidden;
-			}
-
-			&-prev-next-button {
-				&.previous,
-				&.next {
-					top: 50%;
-
-					transform: translateY(-50%);
-				}
-
-				&.previous {
-					left: -$offset--xs;
-
-					@media #{$sm} {
-						left: -$offset--sm;
-					}
-				}
-
-				&.next {
-					right: -$offset--xs;
-
-					@media #{$sm} {
-						right: -$offset--sm;
-					}
-				}
-			}
+			width: percentage(3/5);
 		}
 	}
 
 	&__wrapper {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-
-		@include clearfix();
-		width: percentage(3/5);
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
-
