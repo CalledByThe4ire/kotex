@@ -11,68 +11,137 @@
     "imgTabDesk2x": "assets/images/participants/content/participant-1--tab-desk@2x.jpg",
     "content": [
       {
-        "group": [
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-2--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-2--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-2--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-2--tab-desk@2x.jpg"
-          },
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-3--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-3--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-3--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-3--tab-desk@2x.jpg"
-          },
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-4--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-4--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-4--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-4--tab-desk@2x.jpg"
-          },
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-5--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-5--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-5--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-5--tab-desk@2x.jpg"
-          },
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-6--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-6--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-6--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-6--tab-desk@2x.jpg"
-          },
-          {
-            "isParent": false,
-            "name": "Мария<br>Шарапова",
-            "slogan": "Меня<br>не&nbsp;остановить",
-            "imgAlt": "Фото участницы проекта",
-            "imgMobile": "assets/images/participants/content/participant-7--mobile.jpg",
-            "imgMobile2x": "assets/images/participants/content/participant-7--mobile@2x.jpg",
-            "imgTabDesk": "assets/images/participants/content/participant-7--tab-desk.jpg",
-            "imgTabDesk2x": "assets/images/participants/content/participant-7--tab-desk@2x.jpg"
-          }
-        ]
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-2--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-2--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-2--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-2--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-3--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-3--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-3--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-3--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-4--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-4--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-4--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-4--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-5--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-5--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-5--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-5--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-6--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-6--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-6--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-6--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-7--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-7--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-7--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-7--tab-desk@2x.jpg"
+      }
+    ]
+  },
+  {
+    "isParent": true,
+    "heading": "Участницы второй недели",
+    "name": "Мария<br>Шарапова",
+    "slogan": "Меня<br>не&nbsp;остановить",
+    "imgAlt": "Фото участницы проекта",
+    "imgMobile": "assets/images/participants/content/participant-8--mobile.jpg",
+    "imgMobile2x": "assets/images/participants/content/participant-8--mobile@2x.jpg",
+    "imgTabDesk": "assets/images/participants/content/participant-8--tab-desk.jpg",
+    "imgTabDesk2x": "assets/images/participants/content/participant-8--tab-desk@2x.jpg",
+    "content": [
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-9--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-9--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-9--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-9--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-10--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-10--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-10--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-10--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-11--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-11--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-11--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-11--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-12--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-12--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-12--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-12--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-13--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-13--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-13--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-13--tab-desk@2x.jpg"
+      },
+      {
+        "isParent": false,
+        "name": "Мария<br>Шарапова",
+        "slogan": "Меня<br>не&nbsp;остановить",
+        "imgAlt": "Фото участницы проекта",
+        "imgMobile": "assets/images/participants/content/participant-14--mobile.jpg",
+        "imgMobile2x": "assets/images/participants/content/participant-14--mobile@2x.jpg",
+        "imgTabDesk": "assets/images/participants/content/participant-14--tab-desk.jpg",
+        "imgTabDesk2x": "assets/images/participants/content/participant-14--tab-desk@2x.jpg"
       }
     ]
   }
