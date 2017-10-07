@@ -24,4 +24,42 @@
 			width: percentage(3/5);
 		}
 	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+
+		padding: 0;
+
+		background: none;
+		border: none;
+		cursor: pointer;
+
+		svg {
+			@include fluid-type(width, 320px, 767px, 20px, 50px);
+			fill: $color-primary;
+
+			@media #{$md} {
+				width: 25px;
+				height: 25px;
+			}
+
+			@media #{$lg} {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+
+	&__prev {
+		svg {
+			transform: rotate(0deg);
+		}
+	}
+
+	&__next {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
 }
