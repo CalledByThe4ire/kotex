@@ -88,7 +88,7 @@
 	}
 
 	&--parent {
-		display: flex;
+		display: flex !important; // slick-carousel issues
 		flex-wrap: wrap;
 		flex-direction: column;
 
@@ -204,18 +204,13 @@
 
 	&--child {
 		position: relative;
-		lost-waffle: 1/3 auto 1rem flex;
-
-		@media #{$tab-desk} {
-			width: percentage(3/5);
-		}
 
 		@media #{$md} {
-			lost-waffle: 1/3 auto 1.6rem flex;
+			lost-column: 1/3 auto 1.6rem !important; // slick-carousel issues
 		}
 
 		@media #{$lg} {
-			lost-waffle: 1/3 auto 2.4rem flex;
+			lost-column: 1/3 auto 2.4rem !important; // slick-carousel issues
 		}
 
 		#{$root}__content {

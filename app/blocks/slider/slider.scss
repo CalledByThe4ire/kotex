@@ -3,16 +3,14 @@
 		position: absolute;
 
 		@include fluid-type(width, 320px, 767px, 20px, 50px);
+
 		@include fluid-type(height, 320px, 767px, 20px, 50px);
 		padding: 0;
-
 		text-indent: -6666px;
-
 		background-color: transparent;
 		background-image: url("../images/participants/icon-arrow__participants.svg");
 		background-repeat: no-repeat;
 		border: none;
-
 		cursor: pointer;
 
 		@media #{$md} {
@@ -38,7 +36,6 @@
 .slider {
 	&--parent {
 		position: relative;
-
 		padding-top: 2rem;
 
 		@media #{$md} {
@@ -96,7 +93,6 @@
 
 	&--child {
 		display: flex;
-		flex-wrap: wrap;
 
 		@include padding-x(3rem);
 
@@ -105,25 +101,40 @@
 			width: percentage(3/5);
 		}
 
-		& .slick-arrow {
-			top: 50%;
-
-			transform: translateY(-50%);
-		}
-
-		& .slick-prev {
-			left: -$offset--xs;
-
-			@media #{$sm} {
-				left: -$offset--sm;
+		& .slick {
+			&-arrow {
+				top: 50%;
+				transform: translateY(-50%);
 			}
-		}
 
-		& .slick-next {
-			right: -$offset--xs;
+			&-prev {
+				left: -$offset--xs;
 
-			@media #{$sm} {
-				right: -$offset--sm;
+				@media #{$sm} {
+					left: -$offset--sm;
+				}
+			}
+
+			&-next {
+				right: -$offset--xs;
+
+				@media #{$sm} {
+					right: -$offset--sm;
+				}
+			}
+
+			&-slide {
+				& div:first-child {
+					& .slide--child {
+						@media #{$md} {
+							margin-bottom: 1.6rem;
+						}
+
+						@media #{$lg} {
+							margin-bottom: 2.4rem;
+						}
+					}
+				}
 			}
 		}
 	}
