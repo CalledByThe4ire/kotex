@@ -2,8 +2,7 @@ include ../slide/slide
 
 mixin slider(tree)
 	+b('div').slider(data-js='slider--parent')&attributes(attributes)
-		+e('div').wrapper.swiper-wrapper
-			each item in tree
-				+slide(item)(class='__slide')
-					if item.content
-						+slider(item.content)(data-js='slider--child', class='--child')
+		each item in tree
+			+slide(item)(class='__slide')
+				if item.content
+					+slider(item.content)(data-js='slider--child', class='--child')

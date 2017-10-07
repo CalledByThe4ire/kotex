@@ -1,15 +1,10 @@
 .participants {
-	width: 100%;
-	height: 100%;
 	&__container {
 		@include container();
-		height: 100%;
 	}
 
 	&__container-fluid {
 		@include container-fluid();
-		height: 100%;
-
 		@include retina-background("participants/bg__participants--mobile", "jpg");
 		background-size: cover;
 		background-color: #b6bddd;
