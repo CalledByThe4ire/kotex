@@ -1,3 +1,40 @@
+.slick {
+	&-arrow {
+		position: absolute;
+
+		@include fluid-type(width, 320px, 767px, 20px, 50px);
+		@include fluid-type(height, 320px, 767px, 20px, 50px);
+		padding: 0;
+
+		text-indent: -6666px;
+
+		background-color: transparent;
+		background-image: url("../images/participants/icon-arrow__participants.svg");
+		background-repeat: no-repeat;
+		border: none;
+
+		cursor: pointer;
+
+		@media #{$md} {
+			width: 25px;
+			height: 25px;
+		}
+
+		@media #{$lg} {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&-prev {
+		transform: rotate(0);
+	}
+
+	&-next {
+		transform: rotate(180deg);
+	}
+}
+
 .slider {
 	&--parent {
 		position: relative;
@@ -11,6 +48,50 @@
 		@media #{$lg} {
 			padding-top: 5rem;
 		}
+
+		& .slick-arrow {
+			top: 2rem;
+
+			@media #{$md} {
+				top: 3.5rem;
+			}
+
+			@media #{$lg} {
+				top: 5rem;
+			}
+		}
+
+		& .slick-prev {
+			left: -$offset--xs;
+
+			@media #{$sm} {
+				left: -$offset--sm;
+			}
+
+			@media #{$md} {
+				left: calc(50% - 185px);
+			}
+
+			@media #{$lg} {
+				left: calc(50% - 285px);
+			}
+		}
+
+		& .slick-next {
+			right: -$offset--xs;
+
+			@media #{$sm} {
+				right: -$offset--sm;
+			}
+
+			@media #{$md} {
+				right: calc(50% - 185px);
+			}
+
+			@media #{$lg} {
+				right: calc(50% - 285px);
+			}
+		}
 	}
 
 	&--child {
@@ -23,43 +104,27 @@
 			@include padding-x(0);
 			width: percentage(3/5);
 		}
-	}
 
-	&__prev,
-	&__next {
-		position: absolute;
+		& .slick-arrow {
+			top: 50%;
 
-		padding: 0;
+			transform: translateY(-50%);
+		}
 
-		background: none;
-		border: none;
-		cursor: pointer;
+		& .slick-prev {
+			left: -$offset--xs;
 
-		svg {
-			@include fluid-type(width, 320px, 767px, 20px, 50px);
-			fill: $color-primary;
-
-			@media #{$md} {
-				width: 25px;
-				height: 25px;
-			}
-
-			@media #{$lg} {
-				width: 40px;
-				height: 40px;
+			@media #{$sm} {
+				left: -$offset--sm;
 			}
 		}
-	}
 
-	&__prev {
-		svg {
-			transform: rotate(0deg);
-		}
-	}
+		& .slick-next {
+			right: -$offset--xs;
 
-	&__next {
-		svg {
-			transform: rotate(180deg);
+			@media #{$sm} {
+				right: -$offset--sm;
+			}
 		}
 	}
 }

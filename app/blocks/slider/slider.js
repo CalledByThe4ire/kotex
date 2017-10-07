@@ -9,8 +9,7 @@ export default window.addEventListener(`DOMContentLoaded`, () => {
 
   // Slick' instances
   const parentSlick = {
-    prevArrow: `.slider__prev`,
-    nextArrow: `.slider__next`
+    arrows: true
   };
 
   $(parentSlider).slick(parentSlick);

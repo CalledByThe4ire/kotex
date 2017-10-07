@@ -36,6 +36,16 @@ const utils = {
    */
   addListenerMulti(element, eventNames, listener) {
     eventNames.split(` `).forEach(e => element.addEventListener(e, listener, false));
+  },
+  /**
+   * Add multiple attributes to an element
+   * @param  {HTMLElement} element
+   * @param  {String} attributes
+   */
+  setAttributes(element, attributes) {
+    Object.keys(attributes).forEach(function (name) {
+      element.setAttribute(name, attributes[name]);
+    });
   }
 };
 
