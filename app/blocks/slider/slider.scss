@@ -1,27 +1,24 @@
 .slick {
+	$root: &;
+
+	&-arrow,
+	&-dots button {
+		padding: 0;
+
+		text-indent: -6666px;
+		background-color: transparent;
+		border: none;
+
+		cursor: pointer;
+	}
+
 	&-arrow {
 		position: absolute;
 
 		@include fluid-type(width, 320px, 767px, 20px, 50px);
-
 		@include fluid-type(height, 320px, 767px, 20px, 50px);
-		padding: 0;
-		text-indent: -6666px;
-		background-color: transparent;
 		background-image: url("../images/participants/icon-arrow__participants.svg");
 		background-repeat: no-repeat;
-		border: none;
-		cursor: pointer;
-
-		@media #{$md} {
-			width: 25px;
-			height: 25px;
-		}
-
-		@media #{$lg} {
-			width: 40px;
-			height: 40px;
-		}
 	}
 
 	&-prev {
@@ -31,34 +28,93 @@
 	&-next {
 		transform: rotate(180deg);
 	}
+
+	&-dots {
+		position: absolute;
+		left: 50%;
+
+		@include list-clear();
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 100px;
+
+		transform: translateX(-50%);
+
+		@media #{$md} {
+			bottom: -2.5rem;
+
+			height: 10px;
+		}
+
+		@media #{$lg} {
+			bottom: -3.5rem;
+
+			height: 15px;
+		}
+
+		& > li {
+			background-color: #d2d2d2;
+			border-radius: 50%;
+
+			cursor: pointer;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@media #{$md} {
+				width: 10px;
+				height: 10px;
+				margin-right: 5px;
+			}
+
+			@media #{$lg} {
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+			}
+		}
+
+		& > #{$root}-active {
+			background-color: $color-primary;
+		}
+	}
 }
 
 .slider {
 	&--parent {
 		position: relative;
-		padding-top: 2rem;
+
+		@include padding-y(2rem);
 
 		@media #{$md} {
-			padding-top: 3.5rem;
+			@include padding-y(3.5rem);
 		}
 
 		@media #{$lg} {
-			padding-top: 5rem;
+			@include padding-y(5rem);
 		}
 
-		& .slick-arrow {
+		& > .slick-arrow {
 			top: 2rem;
 
 			@media #{$md} {
 				top: 3.5rem;
+
+				width: 25px;
+				height: 25px;
 			}
 
 			@media #{$lg} {
 				top: 5rem;
+
+				width: 40px;
+				height: 40px;
 			}
 		}
 
-		& .slick-prev {
+		& > .slick-prev {
 			left: -$offset--xs;
 
 			@media #{$sm} {
@@ -74,7 +130,7 @@
 			}
 		}
 
-		& .slick-next {
+		& > .slick-next {
 			right: -$offset--xs;
 
 			@media #{$sm} {
@@ -92,50 +148,60 @@
 	}
 
 	&--child {
+		@include padding-x(3rem);
 		display: flex;
 
-		@include padding-x(3rem);
+		overflow: hidden;
 
 		@media #{$tab-desk} {
 			@include padding-x(0);
 			width: percentage(3/5);
+
+			overflow: visible;
 		}
 
-		& .slick {
+		@media #{$md} {
+			margin-bottom: 2.5rem;
+		}
+
+		@media #{$lg} {
+			margin-bottom: 3.5rem;
+		}
+
+		& > .slick {
 			&-arrow {
 				top: 50%;
+
+				@include fluid-type(width, 320px, 767px, 15px, 37.5px);
+				@include fluid-type(height, 320px, 767px, 15px, 37.5px);
+
 				transform: translateY(-50%);
 			}
 
 			&-prev {
-				left: -$offset--xs;
-
-				@media #{$sm} {
-					left: -$offset--sm;
-				}
+				left: 0;
 			}
 
 			&-next {
-				right: -$offset--xs;
+				right: 0;
 
-				@media #{$sm} {
-					right: -$offset--sm;
-				}
+				transform: translateY(-50%) rotate(180deg);
 			}
 
-			&-slide {
-				& div:first-child {
-					& .slide--child {
-						@media #{$md} {
-							margin-bottom: 1.6rem;
-						}
+			// &-list {
+			// 	@include margin-x(-1rem);
+			// }
 
-						@media #{$lg} {
-							margin-bottom: 2.4rem;
-						}
-					}
-				}
-			}
+			// &-slide {
+			// 	@include margin-x(1rem);
+			// }
+
+			// &-active {
+			// 	&:first-child,
+			// 	&:last-child {
+			// 		@include margin-x(0);
+			// 	}
+			// }
 		}
 	}
 }
