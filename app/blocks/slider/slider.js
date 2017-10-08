@@ -13,7 +13,6 @@ export default window.addEventListener(`DOMContentLoaded`, () => {
 
   // Slick' instances
   const parentSlick = {
-    infinite: true,
     arrows: true
   };
 
